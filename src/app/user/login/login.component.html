@@ -4,45 +4,48 @@
     <a href="#" class="hover:text-green-300">Home</a>
     <div class="flex h-10 w-[1px] bg-white"></div>
     <img src="../../../assets/Vector.png" alt="UrbanRoots Logo" class="h-8" />
-
     <!-- Add more links here if needed -->
   </nav>
 </header>
 
-<section class="flex flex-col md:flex-row w-full py-20 px-5 min-h-screen">
+<section class="flex flex-col md:flex-row w-full py-20 px-1 min-h-screen">
+  <!-- Center the GIF on large screens -->
   <div class="hidden md:flex items-center justify-center w-1/2">
-    <img src="../../../assets/loginImg.gif" alt="Logo" class="h-80 border-4 border-green-500 rounded-3xl" loading="lazy" />
+    <img src="../../../assets/loginImg.gif" alt="Logo" class="h-96 border-4 border-green-500 rounded-3xl" loading="lazy" />
   </div>
 
-  <div class="flex flex-col w-full md:w-1/2 mx-auto justify-center items-center">
-    <h1 class="text-3xl w-full font-bold text-center md:text-left">Welcome Back!</h1>
-    <p class="text-center md:text-left text-gray-500 w-full md:pr-28">
-      To keep connected with us, please login with your personal information by email address and password.
+  <div class="flex flex-col w-full md:w-1/2 mx-auto justify-center items-center text-center">
+    <h1 class="text-3xl font-bold mb-4">Welcome Back!</h1>
+    <p class="text-gray-500 mb-6">
+      To keep connected with us, please login with <br> your personal information by email address and password.
     </p>
 
-    <form (ngSubmit)="login()" class="p-6 rounded-lg w-full md:w-[600px] flex flex-col items-center justify-center py-10  bg-white shadow-lg">
-      <h2 class="font-semibold text-center text-xl">Login</h2>
+    <form (ngSubmit)="login()" class="p-6 rounded-lg w-full md:w-[500px] flex flex-col items-center justify-center bg-white shadow-lg">
+      <h2 class="font-semibold text-xl mb-6">Login</h2>
 
-      <div class="mt-4 w-full">
+      <div class="w-full mb-4">
         <input 
           type="email" 
           [(ngModel)]="email" 
           name="email" 
           placeholder="Email" 
           required 
-          class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+      </div>
+
+      <div class="w-full mb-6">
         <input 
           type="password" 
           [(ngModel)]="password" 
           name="password" 
           placeholder="Password" 
           required 
-          class="w-full px-4 py-2 mt-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
-      <div class="mt-6 w-full">
+      <div class="w-full mb-6">
         <button 
           type="submit" 
           class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
@@ -51,8 +54,8 @@
         </button>
       </div>
 
-      <div class="flex flex-col md:flex-row w-full justify-between items-center mt-4 text-sm text-gray-600">
-        <p>
+      <div class="flex flex-col md:flex-row w-full justify-between items-center text-sm text-gray-600">
+        <p class="mb-2 md:mb-0">
           Don't have an account? 
           <a routerLink="/user/registration" class="text-blue-500 hover:underline">Create one</a>
         </p>
