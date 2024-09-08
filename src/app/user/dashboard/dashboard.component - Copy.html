@@ -1,0 +1,87 @@
+<div class="flex flex-col h-screen bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white shadow-md p-4 flex items-center justify-between">
+    <h1 class="text-3xl font-bold text-gray-800">Welcome back, [User's Name]!</h1>
+    <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Create New Garden</button>
+  </header>
+
+  <main class="flex-1 p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- User Profile Summary -->
+    <section class="bg-white rounded-lg shadow-md p-4">
+      <div class="flex items-center mb-4">
+        <img class="w-16 h-16 rounded-full border-2 border-blue-500" src="[Profile Picture URL]" alt="Profile Picture">
+        <div class="ml-4">
+          <h2 class="text-xl font-semibold text-gray-800">Profile Summary</h2>
+          <p class="text-gray-600">Gardens Created: [Number]</p>
+          <p class="text-gray-600">Total Garden Area: [Area] sq. ft.</p>
+          <p class="text-gray-600">Plant Varieties: [Count]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Gardens Section -->
+    <section class="bg-white rounded-lg shadow-md p-4 lg:col-span-2">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">My Gardens</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Example Garden Card -->
+        <div class="bg-gray-50 rounded-lg shadow-sm p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Garden Name</h3>
+          <p class="text-gray-600">Location: [Address]</p>
+          <p class="text-gray-600">Type: [Type]</p>
+          <div class="mt-4 flex justify-between">
+            <button class="text-blue-500 hover:underline">View Details</button>
+            <button class="text-blue-500 hover:underline">Edit</button>
+            <button class="text-blue-500 hover:underline">Share</button>
+          </div>
+        </div>
+        <!-- Add more garden cards dynamically -->
+      </div>
+      <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Create New Garden</button>
+    </section>
+
+    <!-- Community Highlights -->
+    <section class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Community Highlights</h2>
+      <ul class="space-y-4">
+        <li class="flex items-center">
+          <i class="fas fa-bullhorn text-blue-500 mr-3"></i>
+          <span>Recent post or update from the community forum</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-leaf text-green-500 mr-3"></i>
+          <span>New garden created by other users</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-calendar text-yellow-500 mr-3"></i>
+          <span>Upcoming event</span>
+        </li>
+      </ul>
+      <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Explore Community</button>
+    </section>
+    
+    <!-- Map Container -->
+    <section class="bg-white rounded-lg shadow-md p-4 lg:col-span-3">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Your Garden Map</h2>
+      <div class="relative h-96">
+        <div class="map-container w-full h-full" id="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notifications & Quick Actions -->
+  <footer class="bg-white shadow-md p-4 flex flex-col md:flex-row items-center justify-between">
+    <!-- Notifications -->
+    <div class="flex items-center">
+      <i class="fas fa-bell text-gray-600 mr-3"></i>
+      <span>Unread Notifications: [Count]</span>
+      <button class="ml-4 text-blue-500 hover:underline">View All Notifications</button>
+    </div>
+    <!-- Quick Actions -->
+    <div class="flex mt-4 md:mt-0 space-x-4">
+      <input type="text" placeholder="Search..." class="px-4 py-2 border rounded-md">
+      <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Find Gardens Near Me</button>
+      <button class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Add Plant</button>
+      <button class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600">Log Activity</button>
+    </div>
+  </footer>
+</div>
