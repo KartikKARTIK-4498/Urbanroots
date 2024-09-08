@@ -42,7 +42,10 @@
       <div *ngIf="event.eventType === 'offline'" class="mb-4">
         <label class="block text-sm font-medium text-gray-700">Location</label>
         <div id="map" class="h-64 rounded-lg overflow-hidden border border-gray-300 mb-4"></div> 
-      
+        <button type="button" (click)="requestLocation()" 
+        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+        Use My Location
+      </button>
         <div *ngIf="selectedLocation">
           <p>Selected Location: {{ selectedLocation.lat }}, {{ selectedLocation.lng }}</p>
         </div>

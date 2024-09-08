@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDmzjlWef2eWlE4mrkoVmGSUC0vdCbdR6g",
-    authDomain: "urbanroots-a9760.firebaseapp.com",
-    projectId: "urbanroots-a9760",
-    storageBucket: "urbanroots-a9760.appspot.com",
-    messagingSenderId: "75619402438",
-    appId: "1:75619402438:web:4dd08fad2f7fefb5544dc7"
+    apiKey: "AIzaSyAOqUd98LMEvlevJGZmTwZCjFylTgKLWeQ",
+    authDomain: "urbanroots-cf6a2.firebaseapp.com",
+    projectId: "urbanroots-cf6a2",
+    storageBucket: "urbanroots-cf6a2.appspot.com",
+    messagingSenderId: "711889604985",
+    appId: "1:711889604985:web:4c63225796c2fb03ccdfa8"  
   }
 };
 

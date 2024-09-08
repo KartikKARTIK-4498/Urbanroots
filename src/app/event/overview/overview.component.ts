@@ -13,6 +13,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class EventOverviewComponent implements OnInit {
   events: any[] = [];
+  showMenu: boolean = false;
 
   constructor(private authService: AuthService, private eventService: EventService) { }
 

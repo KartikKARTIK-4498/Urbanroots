@@ -1,0 +1,17 @@
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 8em; /* Adjust based on line height */
+    line-height: 2.5em; /* Assuming line height of 1.5 */
+  }
+  
+  .line-clamp-3 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures images fit within their container */
+    display: block;
+    margin: 0 auto;
+  }

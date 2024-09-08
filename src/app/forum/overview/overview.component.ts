@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
 import { ForumService } from '../forum.service';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-overview',
@@ -12,12 +13,11 @@ import { ForumService } from '../forum.service';
   imports: [RouterLink,RouterModule, FormsModule, CommonModule]
 })
 export class ForumOverviewComponent implements OnInit {
-logout() {
-throw new Error('Method not implemented.');
-}
+showMenu: boolean = false;
+
   topics: any[] = [];
 
-  constructor(private forumService: ForumService) { }
+  constructor(private forumService: ForumService, private authService: AuthService) { }
 
   ngOnInit() {
     this.fetchTopics();
@@ -25,6 +25,10 @@ throw new Error('Method not implemented.');
 
   async fetchTopics() {
     this.topics = await this.forumService.getAllTopics();
+  }
+
+  logout() {
+    this.authService.logout();   
   }
 
 }

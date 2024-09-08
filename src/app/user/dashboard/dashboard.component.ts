@@ -32,6 +32,7 @@ export class DashboardComponent implements OnInit {
   selectedCenter: any | null = null; // To store the selected center point
   templatlong: any;
 isSidebarOpen= false;
+showMenu: boolean = false; // State to control sidebar visibility
 
   constructor(
     private authService: AuthService,

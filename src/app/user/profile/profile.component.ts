@@ -20,6 +20,7 @@ export class ProfileComponent implements OnInit {
   profileImageUrl: string | null = null;
   isEditingUsername = false;
   newUsername: string = '';
+  showMenu: boolean = false;
 
   constructor(private authService: AuthService, private storage: Storage) {}
 

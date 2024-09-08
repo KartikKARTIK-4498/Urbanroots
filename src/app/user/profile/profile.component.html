@@ -1,35 +1,60 @@
-<div class="flex flex-col lg:flex-row h-screen">
-  <!-- Sidebar -->
-  <aside class="w-full lg:w-64 bg-white p-6 flex flex-col">
+<div class="flex flex-col h-screen lg:flex-row">
+
+  <!-- Hamburger Menu Button for Small Screens -->
+  <div class="flex items-center justify-between p-4 lg:hidden  top-0 bg-white z-10">
+    <button (click)="showMenu = !showMenu" class="text-gray-600">
+      <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+    </button>
+    <div class="flex items-center p-5 bg-green-100 rounded-lg">
+      <img src="../../../assets/logo2.png" alt="Logo" class="h-10" />
+    </div>
+  </div>
+
+  <!-- Sidebar (Visible on Desktop, Toggle on Mobile) -->
+  <aside
+    class="w-full lg:w-64 bg-white p-6 flex flex-col sticky top-0"
+    [ngClass]="{'hidden': !showMenu, 'lg:flex': true}"
+  >
     <div class="p-5 bg-green-100 rounded-lg mb-2">
-      <img src="../../../assets/logo2.png" alt="Logo" class="mr-2">
+      <img src="../../../assets/logo2.png" alt="Logo" class="mr-2" />
     </div>
 
     <nav class="flex-1">
       <ul class="space-y-2">
         <li>
-          <a routerLink="/user/dashboard" class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md">
+          <a
+            routerLinkActive="bg-gray-200 text-blue-500"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/user/dashboard"
+            class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md"
+          >
             <i class="fas fa-home mr-3"></i>
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a routerLink="/event/overview" class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md">
+          <a
+            routerLink="/event/overview"
+            class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md"
+          >
             <i class="fas fa-calendar mr-3"></i>
             <span>Events</span>
           </a>
         </li>
         <li>
-          <a routerLink="/forum/overview" class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md">
+          <a
+            routerLink="/forum/overview"
+            class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md"
+          >
             <i class="fas fa-comments mr-3"></i>
             <span>Forum</span>
           </a>
         </li>
         <li>
-          <a 
-            routerLinkActive="bg-gray-200 text-blue-500" 
-            [routerLinkActiveOptions]="{ exact: true }"
-            routerLink="/user/profile" class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md">
+          <a
+            routerLink="/user/profile"
+            class="flex items-center p-4 text-gray-600 hover:bg-gray-200 rounded-md"
+          >
             <i class="fas fa-user mr-3"></i>
             <span>Profile</span>
           </a>
@@ -37,10 +62,14 @@
       </ul>
     </nav>
     <div class="mt-auto">
-      <button (click)="logout()" class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Log Out</button>
+      <button
+        (click)="logout()"
+        class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+      >
+        Log Out
+      </button>
     </div>
   </aside>
-
   <!-- Main Content -->
   <main class="flex-1 p-6 overflow-y-auto">
     <!-- Top Bar -->

@@ -72,7 +72,7 @@ export class DiscussionComponent implements OnInit {
     const currentUserId = this.authService.getUserId();
     const currentUser = await this.authService.getCurrentUser();
     const currentUsername = currentUser?.displayName || 'Anonymous';
-    const currentUserImageUrl = currentUser?.photoURL || 'path/to/default-profile-image.jpg';
+    const currentUserImageUrl = currentUser?.photoURL || '../../../assets/avator.jpg';
   
     const newReply = {
       id: this.generateRandomId(), // You'll likely generate a unique ID here

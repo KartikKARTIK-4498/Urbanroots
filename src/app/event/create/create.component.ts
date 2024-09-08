@@ -74,6 +74,7 @@ export class CreateEventComponent implements OnInit {
     });
     // this.initializeMap();
     L.Icon.Default.imagePath = 'assets/';
+    this.requestLocation();
   }
 
   private initializeMap(): void {
@@ -225,6 +226,23 @@ export class CreateEventComponent implements OnInit {
       return this.existingImageUrl; // Use the existing image URL if no new file is selected
     } else {
       return null;
+    }
+  }
+
+  requestLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        this.map.setView([lat, lng], 13);
+        this.setSelectedLocation(L.latLng(lat, lng));
+      }, (error) => {
+        console.error('Geolocation error:', error);
+        alert('Unable to retrieve your location.');
+      });
+    } else {
+      alert('Geolocation is not supported by your browser.');
     }
   }
 
