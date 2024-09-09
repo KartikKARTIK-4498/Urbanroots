@@ -1,4 +1,4 @@
-# UrbanRoots ![logo2](https://github.com/user-attachments/assets/b2caf879-142c-486a-b5c3-0af3ab73edc2)
+# ![logo2](https://github.com/user-attachments/assets/b2caf879-142c-486a-b5c3-0af3ab73edc2)
 
 
 UrbanRoots is an Angular-based web application designed to promote and facilitate urban gardening within communities. The platform empowers users to discover and connect with local gardens, participate in gardening events, and engage in discussions through a dedicated forum. UrbanRoots aims to foster community collaboration, improve urban sustainability, and raise awareness of eco-responsibility.
