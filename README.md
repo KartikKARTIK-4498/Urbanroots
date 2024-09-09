@@ -51,9 +51,10 @@ UrbanRoots is an Angular-based web application designed to promote and facilitat
 - **Angular CLI**: Install Angular CLI globally:
   ```bash
   npm install -g @angular/cli
-```
+  ```
+  ### Installation
 
-### Installation
+
 
 1. Clone the Repository:
 ```bash
