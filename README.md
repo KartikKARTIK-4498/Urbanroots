@@ -49,6 +49,7 @@ UrbanRoots is an Angular-based web application designed to promote and facilitat
 
 - **Node.js**: Ensure Node.js is installed. Download from [here](https://nodejs.org/en/).
 - **Angular CLI**: Install Angular CLI globally:
+
   ```bash
   npm install -g @angular/cli
   ```
@@ -89,5 +90,22 @@ export const environment = {
 5.Serve the App:
 ```bash
 ng serve
+```
+ 
+## Firebase Setup
+To make full use of Firebase services (Authentication, Firestore, and Storage):
+
+- Enable Authentication (Email/Password) in Firebase.
+- Create a Firestore database and define access rules.
+- Enable Firebase Storage to store user-uploaded images.
+- Set up Firebase Hosting to deploy the app globally.
+- Deployment
+To deploy the app on Firebase Hosting, follow these steps:
+```bash
+ng build --prod
+firebase deploy```
+This will build the production version of the Angular app and deploy it to Firebase Hosting.
+
+
 ```
 
