@@ -17,6 +17,8 @@ import {
 } from '@angular/fire/firestore';
 import { getDownloadURL, Storage, uploadBytes } from '@angular/fire/storage';
 import { ref } from 'firebase/storage';
+import Compressor from 'compressorjs'; // Import CompressorJS
+
 
 @Injectable({
   providedIn: 'root'
@@ -140,13 +142,27 @@ export class ForumService {
     const storageRef = ref(this.storage, filePath);
 
     try {
-      await uploadBytes(storageRef, file);
+      const compressedFile = await this.compressImage(file);
+
+      await uploadBytes(storageRef, compressedFile);
       const downloadURL = await getDownloadURL(storageRef);
       return downloadURL;
     } catch (error) {
       console.error('Error uploading image:', error);
       throw error;
     }
+  }
+
+  async compressImage(file: File): Promise<File> {
+    return new Promise((resolve: any, reject: any) => {
+      new Compressor(file, {
+        quality: 0.6, // Compression quality
+        maxWidth: 1024, // Maximum width
+        maxHeight: 1024, // Maximum height
+        success: resolve,    // Resolve the promise with the compressed image file
+        error: reject        // Reject the promise with the error
+      });
+    });
   }
 
   async getTopicsCreatedByUser(userId: string): Promise<any[]> {

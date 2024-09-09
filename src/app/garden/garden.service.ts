@@ -4,6 +4,7 @@ import { Storage, ref, uploadBytes, getDownloadURL, deleteObject } from '@angula
 import { distanceBetween, geohashQueryBounds } from 'geofire-common';
 import * as firebase from 'firebase/app';
 import { map } from 'rxjs';
+import Compressor from 'compressorjs'; // Import CompressorJS
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,8 @@ export class GardenService {
     const storageRef = ref(this.storage, filePath);
 
     try {
-      await uploadBytes(storageRef, file);
+      const compressedFile = await this.compressImage(file);
+      await uploadBytes(storageRef, compressedFile);
       const downloadURL = await getDownloadURL(storageRef);
       return downloadURL;
     } catch (error) {
@@ -44,6 +46,19 @@ export class GardenService {
       throw error; // Re-throw the error for the component to handle
     }
   }
+
+    // Method to compress the image
+    async compressImage(file: File): Promise<File> {
+      return new Promise((resolve: any, reject: any) => {
+        new Compressor(file, {
+          quality: 0.6, // Compression quality
+          maxWidth: 1024, // Maximum width
+          maxHeight: 1024, // Maximum height
+          success: resolve,    // Resolve the promise with the compressed image file
+          error: reject        // Reject the promise with the error
+        });
+      });
+    }
 
 
   async deleteImage(imageUrl: string) {
