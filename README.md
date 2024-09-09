@@ -51,3 +51,42 @@ UrbanRoots is an Angular-based web application designed to promote and facilitat
 - **Angular CLI**: Install Angular CLI globally:
   ```bash
   npm install -g @angular/cli
+```
+
+### Installation
+
+1. Clone the Repository:
+```bash
+git clone https://github.com/yourusername/urbanroots.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd urbanroots
+```
+3. Install Dependencies:
+```bash
+npm install
+````
+
+4. Set Up Firebase:
+- Create a Firebase project from the Firebase Console.
+- Add your Firebase config to src/environments/environment.ts:
+```ts
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "your-api-key",
+    authDomain: "your-app-id.firebaseapp.com",
+    projectId: "your-project-id",
+    storageBucket: "your-app-id.appspot.com",
+    messagingSenderId: "your-messaging-sender-id",
+    appId: "your-app-id",
+  },
+};
+```
+5.Serve the App:
+```bash
+ng serve
+```
+
