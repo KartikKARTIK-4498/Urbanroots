@@ -23,9 +23,7 @@ UrbanRoots is an Angular-based web application designed to promote and facilitat
 ![Forum](path_to_screenshot/forum.png)
 *Community forum where users discuss eco-friendly gardening tips.*
 
-### User Login
-![User Login](path_to_screenshot/user_login.png)
-*User login page with secure authentication using Supabase.*
+
 ---
 ## Features
 
