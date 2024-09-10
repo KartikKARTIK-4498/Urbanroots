@@ -1,0 +1,55 @@
+<div class="container mx-auto p-6 bg-white rounded-lg">
+  <div *ngIf="!garden" class="text-gray-500 text-center py-8">Loading garden details...</div>
+
+  <div *ngIf="garden" class="flex flex-col lg:flex-row gap-8">
+      <div class="lg:w-1/2">
+          <div class="mb-6">
+            <button onclick="window.history.back()"  class="mr-4 text-gray-600 hover:text-gray-800">
+              <!-- You can use an icon for the back button -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+              <h2 class="text-3xl font-extrabold text-gray-800 mb-4">{{ garden.name }}</h2>
+              <p class="text-gray-700 text-lg font-medium">Size: 
+                  <span class="text-blue-500 font-bold">{{ garden.sqft }} sqft</span>
+              </p>
+          </div>
+
+          <swiper-container
+              style="height: 320px;"
+              class="swiper mySwiper rounded-lg"
+              [slidesPerView]="1.14"
+              [centeredSlides]="true"
+              [initialSlide]="0"
+              [threshold]="5"
+              [mousewheel]="false"
+              [spaceBetween]="20">
+              <swiper-slide *ngFor="let image of garden.images; let i = index">
+                  <img [src]="image" class="rounded-lg w-full h-full object-cover"/>
+              </swiper-slide>
+          </swiper-container>
+
+          <div class="mt-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Garden Details</h3>
+              <p class="text-gray-600 mb-2">Created by: {{ garden.username }}</p>
+              <p class="text-gray-600 mb-2">Type: {{ garden.type }}</p>
+              <p class="text-gray-600">{{ garden.description }}</p>
+          </div>
+      </div>
+
+      <div class="lg:w-1/2">
+          <div id="map" class="rounded-lg shadow-lg border border-gray-300 overflow-hidden h-96"></div>
+      </div>
+  </div>
+
+  <div class="mt-6 flex flex-col items-center sm:flex-row justify-center">
+      <!-- <button (click)="copyGardenUrl()" class="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          Copy Garden URL
+      </button> -->
+
+      <button routerLink="/user/dashboard" class="mt-2 sm:mt-0 sm:ml-1 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+          Back
+      </button>
+  </div>
+</div>
