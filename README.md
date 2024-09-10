@@ -4,30 +4,6 @@ UrbanRoots est une application web basée sur Angular, conçue pour promouvoir e
 
 ---
 
-## Visite Visuelle 
-
-### 1. Page d'Accueil
-![Page d'Accueil](![image](https://github.com/user-attachments/assets/2cd6b25e-3351-4471-abc4-a9eedc5f5a72))
-*Page d'accueil d'UrbanRoots présentant les fonctionnalités clés de la plateforme.*
-
-### 2. Gestion des Jardins
-![Gestion des Jardins](path_to_screenshot/garden_management.png)
-*Gestion des jardins dans UrbanRoots.*
-
-### 3. Ajouter un Événement
-![Ajouter un Événement](path_to_screenshot/event.png)
-*Les utilisateurs peuvent créer et participer à des événements de jardinage.*
-
-### 4. Forum
-![Forum](path_to_screenshot/forum.png)
-*Forum communautaire où les utilisateurs discutent de conseils de jardinage éco-responsables.*
-
-### Connexion Utilisateur
-![Connexion Utilisateur](path_to_screenshot/user_login.png)
-*Page de connexion avec une authentification sécurisée utilisant Firebase.*
-
----
-
 ## Fonctionnalités
 
 ### Gestion des Utilisateurs
