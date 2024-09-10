@@ -72,9 +72,16 @@ export class EventDetailsComponent implements OnInit{
       zoomControl: false
     }).setView([this.event.location.latitude, this.event.location.longitude], 15);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(this.map);
+    var customIcon = L.icon({
+      iconUrl: "../../../assets/marker-icon-2x.png",
+      iconSize: [50, 80], // size of the icon
+      iconAnchor: [25, 80], // point of the icon which will correspond to marker's location
+      popupAnchor: [0, -80] // point from which the popup should open relative to the iconAnchor
+    });
+  
+    L.marker([this.event.location.latitude,this.event.location.longitude], {icon: customIcon}).addTo(this.map)
+    .bindPopup('You are here!')
+    .openPopup();
 
     L.marker([this.event.location.latitude,   
  this.event.location.longitude]).addTo(this.map);
