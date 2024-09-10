@@ -1,100 +1,103 @@
 # ![logo2](https://github.com/user-attachments/assets/b2caf879-142c-486a-b5c3-0af3ab73edc2)
 
-
-UrbanRoots is an Angular-based web application designed to promote and facilitate urban gardening within communities. The platform empowers users to discover and connect with local gardens, participate in gardening events, and engage in discussions through a dedicated forum. UrbanRoots aims to foster community collaboration, improve urban sustainability, and raise awareness of eco-responsibility.
+UrbanRoots est une application web basée sur Angular, conçue pour promouvoir et faciliter le jardinage urbain au sein des communautés. La plateforme permet aux utilisateurs de découvrir et de se connecter avec des jardins locaux, de participer à des événements de jardinage et d'engager des discussions via un forum dédié. UrbanRoots vise à favoriser la collaboration communautaire, à améliorer la durabilité urbaine et à sensibiliser à l'éco-responsabilité.
 
 ---
 
-## Visual Tour
+## Visite Visuelle
 
-### 1. Homepage
-![Homepage](path_to_screenshot/homepage.png)
-*The homepage of UrbanRoots showcasing the platform's key features.*
+### 1. Page d'Accueil
+![Page d'Accueil](path_to_screenshot/homepage.png)
+*Page d'accueil d'UrbanRoots présentant les fonctionnalités clés de la plateforme.*
 
-### 2. Garden Management
-![Garden Management](path_to_screenshot/garden_management.png)
-*Managing gardens within UrbanRoots.*
+### 2. Gestion des Jardins
+![Gestion des Jardins](path_to_screenshot/garden_management.png)
+*Gestion des jardins dans UrbanRoots.*
 
-### 3. Add Event
-![Event](path_to_screenshot/resources.png)
-*Users can share and borrow gardening tools in the Resources section.*
+### 3. Ajouter un Événement
+![Ajouter un Événement](path_to_screenshot/event.png)
+*Les utilisateurs peuvent créer et participer à des événements de jardinage.*
 
 ### 4. Forum
 ![Forum](path_to_screenshot/forum.png)
-*Community forum where users discuss eco-friendly gardening tips.*
+*Forum communautaire où les utilisateurs discutent de conseils de jardinage éco-responsables.*
 
+### Connexion Utilisateur
+![Connexion Utilisateur](path_to_screenshot/user_login.png)
+*Page de connexion avec une authentification sécurisée utilisant Firebase.*
 
 ---
-## Features
 
-### User Management
-- **Registration/Login**: Create an account and log in using email and password.
-- **Profile Management**: Update names, upload profile pictures, and track personal activity (gardens created, events participated).
-- **Dashboard**: Access personalized user dashboards to quickly view relevant information like gardens and events.
+## Fonctionnalités
 
-### Gardens Management
-- **Interactive Map**: Use Leaflet to explore and discover nearby gardens, with filter options like distance and type.
-- **Add/Edit/Delete Gardens**: Users can create new gardens, add descriptions, upload images, and manage existing gardens.
-- **View Garden Details**: See garden details such as name, location, size, and images.
+### Gestion des Utilisateurs
+- **Inscription/Connexion** : Créez un compte et connectez-vous en utilisant un email et un mot de passe.
+- **Gestion du Profil** : Mettez à jour votre nom, téléchargez une photo de profil et suivez vos activités personnelles (jardins créés, événements auxquels vous avez participé).
+- **Tableau de Bord** : Accédez à un tableau de bord utilisateur personnalisé pour voir rapidement les informations pertinentes telles que les jardins et les événements.
 
-### Event Management
-- **Create/Manage Events**: Organize gardening events, workshops, and gatherings, or edit/delete existing events.
-- **Participate in Events**: Join events and track participation via the event management interface.
-- **Event Listings**: Browse through upcoming events and join those of interest.
+### Gestion des Jardins
+- **Carte Interactive** : Utilisez Leaflet pour explorer et découvrir les jardins à proximité, avec des options de filtrage par distance et type.
+- **Ajouter/Modifier/Supprimer des Jardins** : Les utilisateurs peuvent créer de nouveaux jardins, ajouter des descriptions, télécharger des images et gérer les jardins existants.
+- **Voir les Détails du Jardin** : Consultez les détails des jardins, y compris le nom, la localisation, la taille et les images.
+
+### Gestion des Événements
+- **Créer/Gérer des Événements** : Organisez des événements de jardinage, des ateliers et des rassemblements communautaires, ou modifiez/supprimez des événements existants.
+- **Participer à des Événements** : Rejoignez des événements et suivez votre participation via l'interface de gestion des événements.
+- **Liste des Événements** : Parcourez les événements à venir et rejoignez ceux qui vous intéressent.
 
 ### Forum (Blogs)
-- **Create/Edit Topics**: Start discussions on gardening, sustainability, and community topics.
-- **Threaded Discussions**: Reply to posts, engage with the community, and build collaborative discussions.
+- **Créer/Modifier des Sujets** : Lancez des discussions sur le jardinage, la durabilité et les sujets communautaires.
+- **Discussions Filtrées** : Répondez aux messages, engagez-vous avec la communauté et participez à des discussions collaboratives.
 
 ---
 
-## Tech Stack
+## Pile Technologique
 
 ### Frontend
-- **Angular 18**: Dynamic and modular web application framework.
-- **Tailwind CSS/Daisy UI**: Utility-first CSS framework for quick and easy styling.
-- **Leaflet**: JavaScript library for building interactive maps.
-- **Swiper.js**: For creating image carousels in the garden and event detail pages.
+- **Angular 18** : Framework web dynamique et modulaire.
+- **Tailwind CSS/Daisy UI** : Framework CSS utilitaire-first pour un style rapide et personnalisable.
+- **Leaflet** : Bibliothèque JavaScript pour créer des cartes interactives.
+- **Swiper.js** : Utilisé pour créer des carrousels d'images sur les pages de détails des jardins et des événements.
 
 ### Backend
-- **Firebase Authentication**: Secure email/password authentication.
-- **Firestore (NoSQL Database)**: Stores user data, gardens, events, and forum posts.
-- **Firebase Storage**: Upload and store images and media files.
-- **Firebase Hosting**: Hosting the Angular application with SSL support and CDN.
+- **Authentification Firebase** : Authentification sécurisée via email/mot de passe.
+- **Firestore (Base de Données NoSQL)** : Stocke les données des utilisateurs, des jardins, des événements et des discussions de forum.
+- **Stockage Firebase** : Permet de télécharger et de stocker des images et des fichiers multimédias.
+- **Hébergement Firebase** : Hébergement de l'application Angular avec support SSL et CDN.
 
 ---
+## Démarrage
 
-## Getting Started
+### Prérequis
 
-### Prerequisites
-
-- **Node.js**: Ensure Node.js is installed. Download from [here](https://nodejs.org/en/).
-- **Angular CLI**: Install Angular CLI globally:
-
+- **Node.js** : Assurez-vous que Node.js est installé. Téléchargez-le [ici](https://nodejs.org/en/).
+- **Angular CLI** : Installez Angular CLI globalement :
+  
   ```bash
   npm install -g @angular/cli
   ```
-  ### Installation
+  
+## Installation
 
 
-
-1. Clone the Repository:
+### 1. Clonez le Répertoire :
 ```bash
 git clone https://github.com/yourusername/urbanroots.git
 ```
 
-2. Navigate to the project directory:
+### 2. Naviguez dans le répertoire du projet :
 ```bash
 cd urbanroots
 ```
-3. Install Dependencies:
+### 3. Installez les Dépendances :
 ```bash
 npm install
 ````
 
-4. Set Up Firebase:
-- Create a Firebase project from the Firebase Console.
-- Add your Firebase config to src/environments/environment.ts:
+### 4. Configurez Firebase :
+Créez un projet Firebase depuis la Console Firebase.
+Ajoutez votre configuration Firebase dans src/environments/environment.ts :
+
 ```ts
 export const environment = {
   production: false,
@@ -108,25 +111,26 @@ export const environment = {
   },
 };
 ```
-5.Serve the App:
+ ### 5.Lancez l'Application :
 ```bash
 ng serve
 ```
- 
-## Firebase Setup
-To make full use of Firebase services (Authentication, Firestore, and Storage):
+L'application sera accessible localement à http://localhost:4200.
 
-- Enable Authentication (Email/Password) in Firebase.
-- Create a Firestore database and define access rules.
-- Enable Firebase Storage to store user-uploaded images.
-- Set up Firebase Hosting to deploy the app globally.
-- Deployment
-To deploy the app on Firebase Hosting, follow these steps:
+---
+ 
+## Configuration de Firebase
+Pour utiliser pleinement les services Firebase (Authentification, Firestore et Stockage) :
+
+Activez l'authentification (Email/Mot de Passe) dans Firebase.
+Créez une base de données Firestore et définissez des règles d'accès.
+Activez Firebase Storage pour stocker les images téléchargées par les utilisateurs.
+Configurez Firebase Hosting pour déployer l'application au niveau mondial.
+
+## Déploiement
+Pour déployer l'application sur Firebase Hosting, suivez ces étapes :
 ```bash
 ng build --prod
-firebase deploy```
-This will build the production version of the Angular app and deploy it to Firebase Hosting.
-
-
+firebase deploy
 ```
-
+Cela construira la version de production de l'application Angular et la déploiera sur Firebase Hosting.
