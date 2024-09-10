@@ -9,7 +9,7 @@
   
     <form (ngSubmit)="submitEvent()" #eventForm="ngForm">
       <div class="mb-4">
-        <label for="name" class="block text-sm font-medium text-gray-700">Event Name</label>
+        <label for="name" class="block text-sm font-medium text-gray-700">Nom de l'Événement</label>
         <input type="text" id="name" name="name" [(ngModel)]="event.name" class="mt-1 p-2 border rounded-md w-full" required>
       </div>
   
@@ -27,24 +27,26 @@
       </div>
   
       <div class="mb-4">
-        <label for="dateTime" class="block text-sm font-medium text-gray-700">Date and Time</label>
+        <label for="dateTime" class="block text-sm font-medium text-gray-700">
+          Date et Heure</label>
         <input type="datetime-local" id="dateTime" name="dateTime" [(ngModel)]="event.dateTime" class="mt-1 p-2 border rounded-md w-full" required>
       </div>
   
       <div class="mb-4">
-        <label for="eventType" class="block text-sm font-medium text-gray-700">Event Type</label>
+        <label for="eventType" class="block text-sm font-medium text-gray-700">
+          Type d'Événement</label>
         <select id="eventType" name="eventType" [(ngModel)]="event.eventType" class="mt-1 p-2 border rounded-md w-full" (change)="onEventTypeChange()">
-          <option value="online">Online</option>
-          <option value="offline">Offline</option>
+          <option value="online">En ligne </option>
+          <option value="offline">En présentiel</option>
         </select>
       </div>
   
       <div *ngIf="event.eventType === 'offline'" class="mb-4">
-        <label class="block text-sm font-medium text-gray-700">Location</label>
+        <label class="block text-sm font-medium text-gray-700">Lieu</label>
         <div id="map" class="h-64 rounded-lg overflow-hidden border border-gray-300 mb-4"></div> 
         <button type="button" (click)="requestLocation()" 
         class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-        Use My Location
+       Position actuelle
       </button>
         <div *ngIf="selectedLocation">
           <p>Selected Location: {{ selectedLocation.lat }}, {{ selectedLocation.lng }}</p>
