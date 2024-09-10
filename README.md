@@ -7,7 +7,7 @@ UrbanRoots est une application web basée sur Angular, conçue pour promouvoir e
 ## Visite Visuelle 
 
 ### 1. Page d'Accueil
-![Page d'Accueil](![image](https://github.com/user-attachments/assets/2cd6b25e-3351-4471-abc4-a9eedc5f5a72)
+![Page d'Accueil](![image](https://github.com/user-attachments/assets/2cd6b25e-3351-4471-abc4-a9eedc5f5a72))
 *Page d'accueil d'UrbanRoots présentant les fonctionnalités clés de la plateforme.*
 
 ### 2. Gestion des Jardins
